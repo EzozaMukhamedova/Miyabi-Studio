@@ -1,0 +1,119 @@
+{
+  "HeaderTopTS": {
+    "tashkent": "Toshkent",
+    "about-us": "Biz haqimizda",
+    "products": "Xizmatlar",
+    "contacts": "Kontaktlar",
+    "category": "Kategoriyalar",
+    "menu": "Menyu",
+    "about-material": "Miyabi Studio haqida",
+    "terms-of-use": "Foydalanish shartlari",
+    "privacy-and-security": "Maxfiylik va xavfsizlik siyosati",
+    "return-policy": "Qaytarish siyosati",
+    "contact-us": "Biz bilan aloqa",
+    "follow-us": "Bizning ijtimoiy tarmoqlarda",
+    "download-app": "Mobil ilovani yuklab oling",
+    "contact": "Aloqa",
+    "have-question": "Savolingiz bormi?",
+    "question-placeholder": "O’zingiz qiziqtirgan savollarni bering",
+    "search-placeholder": "Nimani izlayapsiz?",
+    "hero-title": "Siz kutgan Xiaomi 12 Mi Laite",
+    "hero-description": "Orginallik va qulay narxni o‘zida jamlagan Xiaomi 12 Mi Laite siz uchun eng yaxshi arziydigan takliflarimizdan biridir.",
+    "hero-button": "Batafsil"
+  },
+  "AboutUs": {
+    "about": {
+      "title": "Miyabi Studio haqida",
+      "main": "Bosh Sahifa",
+
+      "des": "Ashyo 2022 yilda Toshkent shahrida tashkil etylgan."
+    },
+    "nasiya": {
+      "title": "Muddatli to'lov",
+      "des": "Ashyoda barcha eliktronika maishiy texnikalar uchun qulay onlayn to’lov rejasi"
+    },
+    "paymentMethods": {
+      "title": "To‘lov usullari",
+      "des": "Siz uchun qulay usulda to’lang do’konda, Cilik, Payme orqali."
+    },
+    "delivery": {
+      "title": "Joy band qilish",
+      "des": "Ashyoda tovarlarni yetkazib berish shartlari."
+    },
+    "garranty": {
+      "title": "Tavorlarga kafolat",
+      "des": "Ashyo onlayn do’konining kafolati va qaytarilish haqida hamma narsani bilib oling"
+    },
+    "help": {
+      "title": "Yordam",
+      "des": "Tushumagan narsalaringiz bo’lsa savollaringizni bering."
+    },
+    "productsTitle": "Oxirgi ko’rilgan mahsulotlar",
+    "des1": "Miyabi Studio — zamonaviy go‘zallik saloni bo‘lib, mijozlarga sifatli xizmat, nafis muhit va ishonchli natijani taqdim etadi. Soch turmaklash, manikyur, makyaj, kosmetologiya va boshqa ko‘plab xizmatlar bir joyda jamlangan.",
+    "des2":  "Miyabi go‘zallik saloni 2025-yilda Japan Digital University talabalari tomonidan tashkil etilgan. Bugungi kunga kelib poytaxt va viloyatlarda 26 ta filial faoliyat yuritmoqda va mijozlar ishonchini qozonmoqda.",
+    "des3": "Har bir xizmatni siz uchun qulay usulda tanlashingiz mumkin: salonlarimizga tashrif buyurib yoki onlayn bron qilish orqali. Shuningdek, aksiyalar va bo‘lib to‘lash imkoniyatlari ham mavjud. Ro‘yxatdan o‘tish uchun faqat pasport kifoya.",
+    "des4": "Bizda chet ellik fuqarolar uchun qulay xizmat ko‘rsatish sharoiti yaratilgan."
+  },
+  "Products": {
+    "main": "Bosh Sahifa",
+    "smart": "Smartfonlar",
+    "contact": "Qayta aloqa",
+    "products": "Xizmatlar",
+    "category": "Kategoriya",
+    "pageLimit": "Bitta Sahifada",
+    "all": "Hammasi",
+    "sort": "Tartiblash",
+    "sortByDefault": "Barchasi",
+    "sortByCheapest": "Arzonroq",
+    "sortByExpensive": "Qimmatroq",
+    "sortByRating": "Eng Mashhur",
+    "price": "Narxi [so'm]",
+    "from": "..dan",
+    "to": "..gacha",
+    "brands": "Brandi",
+    "ram": "Tezkor xotira RAM",
+    "rom": "Doiymi xotira ROM",
+    "batteryMah": "Akkumulyator hajmi",
+    "prev": "Orqaga",
+    "next": "Oldinga",
+    "productsTitle": "Oxirgi ko’rgan mahsulotlar",
+    "filter": "Saralash",
+
+    "price": "Narxi",
+    "installment": "Oyiga {{amount}} uzsdan muddatli to‘lov",
+    "addToCart": "Savatga qo‘shish",
+    "buyNow": "Xarid qilish",
+    "deliveryNationwide": "Yetkazib berish O‘zbekiston bo‘ylab",
+    "storePickup": "Do‘kondan olib ketish mumkin",
+    "deliveryTime": "1–3 kun ichida yetkazib beriladi",
+    "specs": "Telfon xususiyatlari",
+    "reviews": "Mijozlarni fikrlari",
+    "Sale": "Chegirma",
+    "EnjoyMusic": "Musiqa zavqini his qilish uchun ko'p mablag' sarflash shart emas!",
+    "LastViewedProducts": "Oxirgi ko‘rilgan mahsulotlar",
+    "PromotionalProducts": "Aksiyadagi xizmatlar",
+    "MostPopularProducts": "Go‘zallik trendlari 2025",
+    "PremiumProducts": "Eng mashhur salonlar",
+    "SaleProducts": "Chegirmadagi xizmatlar"
+  },
+
+  "Contact": {
+    "title": "Qayta aloqa",
+    "description": "Bizning ishimiz haqidagi fikr mulohazalaringiz bilan bo‘lishing yoki izohlar maydonida o‘zingizni qiziqtirgan savolingizni yo‘llang",
+    "firstName": "Ism",
+    "lastName": "Familiya",
+    "phone": "Telefon raqam",
+    "email": "Elektronpochta",
+    "message": "O'zingizni fikrlaringizni qoldiring",
+    "submit": "Yuborish",
+    "companyName": "OOO “Ashyo”",
+    "addressLabel": "Manzilimiz",
+    "address": "100052, O‘zbekiston Respublikasi, Toshkent shahri, Bodomzor yo‘li 1-tor ko‘chasi, 72",
+    "phoneLabel": "Telefon raqami",
+    "emailLabel": "Elektron pochta",
+    "socialLabel": "Ijtimoiy tarmoqlarimiz",
+    "searchStores": "Do‘konlarimizni izlang",
+    "submitSuccess": "Muvaffaqiyatli yuborildi!",
+    "required": "To‘ldirish majburiy!"
+  }
+}

@@ -1,0 +1,156 @@
+.custom-grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 18%;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  grid-template-rows: repeat(5, 50px);
+  grid-template-areas:
+    "artel samsung nokia mi"
+    "artel samsung nokia mi"
+    "apple samsung huawei mi"
+    "apple vivo huawei mi"
+    "apple vivo huawei koproq";
+}
+
+.grid-element-1 {
+  grid-area: artel;
+  justify-self: center;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #67b43733;
+}
+
+.grid-element-2 {
+  grid-area: samsung;
+  justify-self: center;
+  background-color: #034ea21a;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-element-3 {
+  grid-area: nokia;
+  justify-self: center;
+  background-color: #00439c1f;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-element-4 {
+  grid-area: mi;
+  justify-self: start;
+  background-color: #ff670033;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-element-5 {
+  grid-area: apple;
+  justify-self: center;
+  background-color: #0000001a;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-element-6 {
+  grid-area: vivo;
+  justify-self: center;
+  background-color: #006db833;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-element-7 {
+  grid-area: huawei;
+  align-self: center;
+  background-color: #ff1a1f33;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  justify-self: center;
+}
+
+.grid-element-8 {
+  /* grid-area: koproq; */
+  justify-self: center;
+  background-color: #0f4a97;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &:hover {
+    background-color: #c6dff8;
+    color: #0f4a97;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .custom-grid {
+    grid-template-rows: repeat(4, 50px);
+    gap: 5px;
+    grid-template-areas:
+      "artel samsung nokia mi"
+      "artel samsung nokia mi"
+      "apple vivo huawei mi"
+      "apple vivo huawei koproq";
+
+    .grid-element {
+      img {
+        width: 50%;
+      }
+    }
+    .grid-element-5 {
+      img {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .custom-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(10, 30px);
+    grid-template-areas:
+      "artel samsung"
+      "artel samsung"
+      "apple samsung "
+      "apple vivo "
+      "apple vivo "
+      "nokia mi"
+      "nokia mi"
+      "huawei mi"
+      "huawei mi "
+      "huawei koproq ";
+  }
+}

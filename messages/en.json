@@ -1,0 +1,116 @@
+{
+  "HeaderTopTS": {
+    "tashkent": "Tashkent",
+    "about-us": "About Us",
+    "products": "Products",
+    "contacts": "Contacts",
+    "category": "Category",
+    "menu": "Menu",
+    "about-material": "About Material",
+    "terms-of-use": "Terms of Use",
+    "privacy-and-security": "Privacy and Security Policy",
+    "return-policy": "Return Policy",
+    "contact-us": "Contact Us",
+    "follow-us": "Follow us on social media",
+    "download-app": "Download the mobile app",
+    "contact": "Contact",
+    "have-question": "Have a question?",
+    "question-placeholder": "Ask your question here",
+    "search-placeholder": "What are you looking for?",
+    "hero-title": "The Xiaomi 12 Mi Laite you've been waiting for",
+    "hero-description": "The Xiaomi 12 Mi Laite is one of our best value offers, combining originality and affordability.",
+    "hero-button": "Learn More"
+  },
+  "AboutUs": {
+    "about": {
+      "title": "About Ashyo",
+      "main": "Home",
+      "des": "Ashyo was founded in 2022 in Tashkent city."
+    },
+    "nasiya": {
+      "title": "Installment Plan",
+      "des": "Ashyo offers a convenient online payment plan for all electronics and home appliances."
+    },
+    "paymentMethods": {
+      "title": "Payment Methods",
+      "des": "Pay in a way that's convenient for you: in-store, via Click or Payme."
+    },
+    "delivery": {
+      "title": "Delivery",
+      "des": "Delivery terms and conditions for Ashyo products."
+    },
+    "garranty": {
+      "title": "Product Warranty",
+      "des": "Learn everything about warranty and returns at Miyabi Studio online store."
+    },
+    "help": {
+      "title": "Help",
+      "des": "If you don’t understand something, feel free to ask your questions."
+    },
+    "productsTitle": "Recently Viewed Products",
+    "des1": "Ashyo offers market-priced household appliances and electronics. For over 2 years, we have provided customers with a wide assortment of products and reliable service.",
+    "des2": "Ashyo was established in 2022 in Tashkent. Today, we operate 26 stores across the capital and regions.",
+    "des3": "You can purchase goods in any convenient way: in our retail stores or on the website. An online payment plan is available for household appliances. A passport is required for registration.",
+    "des4": "Legal entities can make purchases via bank transfer without any extra fees."
+  },
+  "Products": {
+    "main": "Home",
+    "products": "Products",
+    "category": "Category",
+    "contact": "Contact us",
+    "smart": "Smartphones",
+    "pageLimit": "Per Page",
+    "all": "All",
+    "sort": "Sort",
+    "sortByDefault": "All",
+    "sortByCheapest": "Cheapest",
+    "sortByExpensive": "Most Expensive",
+    "sortByRating": "Most Popular",
+    "price": "Price [UZS]",
+    "from": "From",
+    "to": "To",
+    "prev": "Back",
+    "next": "Next",
+    "brands": "Brands",
+    "ram": "RAM",
+    "rom": "ROM",
+    "batteryMah": "Battery Capacity",
+
+    "price": "Price",
+    "installment": "Installment from {{amount}} uzs/month",
+    "addToCart": "Add to cart",
+    "buyNow": "Buy now",
+    "deliveryNationwide": "Delivery across Uzbekistan",
+    "storePickup": "Pickup from store",
+    "deliveryTime": "Delivered within 1–3 days",
+    "specs": "Phone specifications",
+    "reviews": "Customer reviews",
+    "Sale": "Sale",
+    "EnjoyMusic": "You don't have to spend a lot of money to enjoy the pleasure of music!",
+    "LastViewedProducts": "Last viewed products",
+    "PromotionalProducts": "Promo Services",
+    "MostPopularProducts": "Beauty Trends 2025",
+    "PremiumProducts": "Popular Salons",
+    "SaleProducts": "Discounted Services"
+  },
+
+  "Contact": {
+    "title": "Contact Us",
+    "description": "Share your thoughts about our work or ask your question in the comment field",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone Number",
+    "email": "Email",
+    "message": "Leave your message",
+    "submit": "Submit",
+    "companyName": "LLC “Ashyo”",
+    "addressLabel": "Our address",
+    "address": "100052, Republic of Uzbekistan, Tashkent city, Bodomzor 1st alley, 72",
+    "phoneLabel": "Phone Number",
+    "emailLabel": "Email",
+    "socialLabel": "Our Social Media",
+    "searchStores": "Find Our Stores",
+    "submitSuccess": "Successfully submitted!",
+    "required": "This field is required!"
+  }
+}
