@@ -91,8 +91,11 @@ export const categoryDetails = {
     price: "70,000 UZS",
     images: [
       "/images/kiprik1.jpg",
-      "/images/kiprik2.jpg",
+      "/images/kiprik2.png",
       "/images/kiprik3.jpg",
+      "/images/kiprik4.jpg",
+      "/images/kiprik5.jpg",
+      "/images/kiprik6.jpg",
     ],
     mapUrl: "https://maps.google.com?q=Lash+Studio+Tashkent",
   },

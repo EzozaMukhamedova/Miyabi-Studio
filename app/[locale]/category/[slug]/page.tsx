@@ -1,139 +1,17 @@
-// "use client";
-// import { useParams } from "next/navigation";
-
-// const categoryContents: Record<string, { title: string; description: string }> =
-//   {
-//     sochTurmaklash: {
-//       title: "Soch turmaklash",
-//       description:
-//         "Soch turmaklash xizmatlari, klassik va zamonaviy uslublar bilan",
-//     },
-//     manikyur: {
-//       title: "Manikyur",
-//       description: "Chiroyli tirnoqlar uchun professional manikyur xizmatlari",
-//     },
-//     kosmetologiya: {
-//       title: "Kosmetologiya",
-//       description: "Teringiz uchun parvarish, tozalash va davolash muolajalari",
-//     },
-//     massaj: {
-//       title: "Massaj",
-//       description: "Dam olish va sog‘liq uchun terapevtik massaj xizmati",
-//     },
-//     lazer: {
-//       title: "Lazer muolajalari",
-//       description: "Lazer asosidagi zamonaviy teri parvarish muolajalari",
-//     },
-//     kiprik: {
-//       title: "Kiprik",
-//       description: "Kipriklarni bo‘yash, uzaytirish va bukish xizmatlari",
-//     },
-//     makyaj: {
-//       title: "Makyaj",
-//       description: "Professional make-up xizmatlari har qanday tadbir uchun",
-//     },
-//   };
-
-// export default function CategoryPage() {
-//   const { slug } = useParams();
-
-//   const content = categoryContents[slug as string];
-
-//   if (!content) {
-//     return <div className="p-10 text-red-500">Kategoriya topilmadi</div>;
-//   }
-
-//   return (
-//     <div className="max-w-3xl p-10 mx-auto">
-//       <h1 className="mb-4 text-3xl font-bold">{content.title}</h1>
-//       <p className="text-lg text-gray-700">{content.description}</p>
-//     </div>
-//   );
-// }
-/////////
-// app/[locale]/category/[slug]/page.tsx
-// import { categoryDetails } from "../../../../app/constants/categoryData";
-// import Image from "next/image";
-// import Link from "next/link";
-
-// interface Props {
-//   params: { slug: string };
-// }
-
-// export default function CategoryPage({ params }: Props) {
-//   const category = categoryDetails[params.slug as keyof typeof categoryDetails];
-
-//   if (!category) {
-//     return <div className="py-10 text-xl text-center">Ma’lumot topilmadi</div>;
-//   }
-
-//   return (
-//     <div className="max-w-6xl px-4 py-8 mx-auto">
-//       <h1 className="mb-2 text-3xl font-bold">{category.title}</h1>
-//       <p className="mb-6 text-gray-600">{category.description}</p>
-
-//       {/* Booking */}
-//       <div className="bg-[#f8f8f8] p-6 rounded-lg shadow-md mb-8">
-//         <h2 className="mb-2 text-xl font-semibold">Booking</h2>
-//         <p className="text-lg font-bold">{category.price}</p>
-//         <Link href="/contact">
-//           <button className="mt-4 bg-[#0F4A97] hover:bg-[#0d3e7d] text-white py-2 px-6 rounded-md">
-//             Buyurtma berish
-//           </button>
-//         </Link>
-//       </div>
-
-//       {/* Contact */}
-//       <div className="mb-8">
-//         <h3 className="font-semibold">📍 Manzil:</h3>
-//         <p>{category.address}</p>
-//         <h3 className="mt-2 font-semibold">📞 Telefon:</h3>
-//         <p>{category.phone}</p>
-//       </div>
-
-//       {/* Gallery */}
-//       <div className="grid grid-cols-2 gap-4 mb-10 md:grid-cols-3">
-//         {category.images.map((img, index) => (
-//           <div key={index} className="overflow-hidden rounded-lg">
-//             <Image
-//               src={img}
-//               alt={`${category.title} rasm ${index + 1}`}
-//               width={300}
-//               height={200}
-//               className="w-full h-[200px] object-cover"
-//             />
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* Map */}
-//       <div className="mt-10">
-//         <h2 className="mb-2 text-xl font-semibold">Xarita</h2>
-//         <iframe
-//           src={category.mapUrl}
-//           width="100%"
-//           height="300"
-//           className="border rounded-md"
-//           allowFullScreen
-//           loading="lazy"
-//         ></iframe>
-//       </div>
-//     </div>
-//   );
-// }
-//////
-
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { categoryDetails } from "../../../../app/constants/categoryData";
+import BookingTableButton from "../../../../components/BookingTableButton/BookingTableButton";
 
 export default function CategoryPage() {
   const params = useParams();
   const slug = params?.slug as keyof typeof categoryDetails;
   const category = categoryDetails[slug];
+
+  const [open, setOpen] = useState(false);
 
   if (!category)
     return <div className="py-10 text-center">Kategoriya topilmadi</div>;
@@ -403,11 +281,18 @@ export default function CategoryPage() {
         {/* O‘ng taraf - Booking va xarita */}
         <div className="border border-red-600 lg:col-span-1">
           <div className="p-4 mb-6 bg-white border rounded-md shadow-sm">
-            <h2 className="mb-2 text-lg font-semibold">Booking</h2>
-            <p className="text-xl font-bold text-pink-600">{category.price}</p>
-            <button className="mt-4 w-full bg-[#0F4A97] text-white py-2 rounded hover:bg-[#0d3e7d] transition-colors">
-              Reserve Now
+            <h2 className="mb-2 text-lg font-semibold text-[#3b2f23]">
+              Narxlar
+            </h2>
+            <p className="text-xl font-bold text-[#be5a21]">{category.price}</p>
+            {/* bron qilish */}
+            <button
+              className="mt-4 w-full bg-[#e47c48] text-white py-2 rounded-lg font-semibold shadow-sm hover:bg-[#cf703d] transition-colors duration-150 cursor-pointer"
+              onClick={() => setOpen(true)}
+            >
+              Hoziroq bron qilish
             </button>
+            <BookingTableButton open={open} onClose={() => setOpen(false)} />
           </div>
 
           <div className="p-4 bg-white border rounded-md shadow-sm">

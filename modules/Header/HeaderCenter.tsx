@@ -36,7 +36,7 @@ function HeaderCenter() {
           />
 
           <span className="text-[#4E3629] text-xl sm:text-2xl md:text-3xl font-extrabold leading-none tracking-tight">
-            Miyabi Studio
+            Beauty Park
           </span>
         </Link>
 

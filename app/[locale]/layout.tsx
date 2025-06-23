@@ -24,7 +24,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
         <link rel="icon" href="/images/logo.svg" />
-        <title>Miyabi Studio</title>
+        <title>Beauty Park</title>
       </head>
       <body>
         <NextIntlClientProvider>
