@@ -3,8 +3,10 @@
 import { getProducts } from "@/service/getProducts";
 import React, { useContext } from "react";
 import ProductCard from "./ProductCardItem";
+import SalonRatingCard from "./SalonRatingCard";
 import { ProductType } from "@/types/ProductType";
 import { ThemeContext } from "@/context/ThemeContextProvider";
+import PopularSalonsSection from "./PopularSalonsSection";
 
 function ProductPage({ title, api }: { title: string; api: string }) {
   const { data: products, isLoading, isError } = getProducts(api);
@@ -39,11 +41,12 @@ function ProductPage({ title, api }: { title: string; api: string }) {
   }
 
   return (
-    <div className="containers py-10">
+    <div className="py-10 containers">
       <h2 className="text-[32px] font-bold mb-[40px]">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {products?.map((product: ProductType, index: number) => (
-          <ProductCard key={product.id || index} product={product} />
+          <PopularSalonsSection key={product.id || index} product={product} />
+          // <ProductCard key={product.id || index} product={product} />
         ))}
       </div>
     </div>

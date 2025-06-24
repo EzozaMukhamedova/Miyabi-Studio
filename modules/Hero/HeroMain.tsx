@@ -139,7 +139,7 @@ const staticBanners = [
     name: "Miyabi Studio — Nafosat markazi",
     description:
       "Yapon estetikasidan ilhomlangan go‘zallik tajribasi. O‘zingizni zavqlantiring.",
-    image: "/images/beauty3.png",
+    image: "/images/bannerQiz.png",
     product_id: 103,
   },
 ];

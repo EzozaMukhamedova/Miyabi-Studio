@@ -13,6 +13,7 @@ import { ThemeContext } from "@/context/ThemeContextProvider";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
+import DemMastersPage from "@/components/Products/Master";
 
 const ProductsMain = ({
   products,
@@ -48,7 +49,9 @@ const ProductsMain = ({
             extraStyleForImg="max-[1060px]:h-[200px] max-[951px]:h-[250px] max-[680px]:h-[300px] "
           />
         ))}
+
       </div>
+      
     </>
   );
 };

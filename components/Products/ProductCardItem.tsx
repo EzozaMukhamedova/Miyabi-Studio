@@ -244,7 +244,7 @@ function ProductCardItem({
 
       <p
         onClick={navigateToItem}
-        className="line-clamp-2 text-[14px] text-[#545D6A] mt-[16px] mb-[28px] max-[1000px]:mb-[17px] max-[520px]:text-[12px] md:w-[200px] w-[150px] h-[60px]"
+        className="line-clamp-2 text-base font-bold text-[#2f2f2f] mt-[16px] mb-[10px] max-[1000px]:mb-[17px] max-[520px]:text-[12px] md:w-[200px] w-[150px] h-[60px]"
       >
         {product.description}
       </p>
@@ -252,11 +252,11 @@ function ProductCardItem({
       <div className="flex items-end justify-between max-[1100px]:hidden">
         <div onClick={navigateToItem}>
           <strong className="text-xl font-bold text-[#0A1729]">
-            {formatNumberSpaces(product.price)} uzs
+            {formatNumberSpaces(product.price)} so'm
           </strong>
-          <div className="bg-[#F02C961A] rounded-[3px] font-bold text-[#F02C96] py-[7px] px-2.5 text-[14px]">
+          {/* <div className="bg-[#F02C961A] rounded-[3px] font-bold text-[#F02C96] py-[7px] px-2.5 text-[14px]">
             {product.nasiya} / {formatNumberSpaces(calculate(product.price, product.nasiya))} uzs
-          </div>
+          </div> */}
         </div>
         <div className="flex items-center gap-2">
           <Button

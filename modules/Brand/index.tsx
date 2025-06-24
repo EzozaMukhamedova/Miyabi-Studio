@@ -87,6 +87,7 @@ const categories = [
 ];
 
 function Brands() {
+  
   const router = useRouter();
 
   const handleClick = (slug: string) => {
@@ -121,9 +122,10 @@ function Brands() {
         className="transition-all duration-300 transform cursor-pointer grid-element-8 hover:scale-105"
       >
         <button
-          className="w-full h-full bg-[#0F4A97] text-white font-medium rounded-[6px] 
-               shadow-md hover:bg-[#0d3e7d] hover:shadow-lg 
+          className="w-full h-full bg-[#e47c48] text-white font-medium rounded-[6px] 
+               shadow-md hover:bg-[#e47c48e6] hover:shadow-lg 
                transition-colors duration-300 ease-in-out cursor-pointer"
+          onClick={() => router.push("/product")}
         >
           Ko'proq
         </button>
