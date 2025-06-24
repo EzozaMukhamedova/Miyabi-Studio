@@ -279,7 +279,7 @@ export default function CategoryPage() {
         </div>
 
         {/* O‘ng taraf - Booking va xarita */}
-        <div className="border border-red-600 lg:col-span-1">
+        <div className=" lg:col-span-1">
           <div className="p-4 mb-6 bg-white border rounded-md shadow-sm">
             <h2 className="mb-2 text-lg font-semibold text-[#3b2f23]">
               Narxlar

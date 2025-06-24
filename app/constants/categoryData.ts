@@ -5,7 +5,7 @@ export const categoryDetails = {
     title: "Soch turmaklash",
     description:
       "Soch turmaklash xizmatlari, klassik va zamonaviy uslublar bilan",
-    address: "Toshkent, Chilonzor-6, Miyabi Studio",
+    address: "Toshkent, Chilonzor-6, Beauty Park",
     phone: "+998 90 123 45 67",
     price: "100,000 UZS",
     images: [

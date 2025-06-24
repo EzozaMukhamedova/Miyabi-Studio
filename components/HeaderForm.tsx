@@ -266,7 +266,7 @@ const HeaderForm = () => {
         <div className="flex w-full gap-2">
           <button
             onClick={() => setShowCategory(!showCategory)}
-            className="px-4 py-2 bg-[#134E9B] text-white text-sm rounded-[6px] flex items-center gap-2"
+            className="px-4 py-2 bg-[#e47c48] text-white text-sm rounded-[6px] flex items-center gap-2"
           >
             {t("category")}
             {showCategory ? <ArrowUpIcon /> : <ArrowDownIcon />}
@@ -281,7 +281,7 @@ const HeaderForm = () => {
               onBlur={handleBlur}
               className="w-full p-3 pr-12 rounded-[6px] bg-[#EBEFF3] outline-none text-sm"
             />
-            <button className="absolute top-0 right-0 h-full px-4 flex items-center justify-center text-white bg-[#134E9B] rounded-[5px]">
+            <button className="absolute top-0 right-0 h-full px-4 flex items-center justify-center text-white bg-[#e47c48] rounded-[5px]">
               <SearchIcon />
             </button>
           </div>

@@ -23,13 +23,10 @@ function HeaderCenter() {
   return (
     <div className="containers w-full py-4 !mb-[32px] md:!mt-[54px] !mt-[20px]">
       <div className="flex items-center justify-between md:justify-start md:gap-6">
-        <Link
-          href="/"
-          className="flex items-center gap-0 text-[#134E9B]" 
-        >
+        <Link href="/" className="flex items-center gap-0 text-[#134E9B]">
           <Image
             src="/images/miyabii.png"
-            alt="Miyabi Studio Logo"
+            alt="Beauty Park Logo"
             width={80}
             height={80}
             className="object-contain w-9 h-9 md:w-20 md:h-20"
@@ -40,7 +37,7 @@ function HeaderCenter() {
           </span>
         </Link>
 
-        <div className="block md:hidden text-[#134E9B] font-medium text-[14px]">
+        <div className="block md:hidden text-[#e47c48] font-medium text-[14px]">
           +998 (99) 897-45-85
         </div>
 

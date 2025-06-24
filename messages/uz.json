@@ -6,7 +6,7 @@
     "contacts": "Kontaktlar",
     "category": "Kategoriyalar",
     "menu": "Menyu",
-    "about-material": "Miyabi Studio haqida",
+    "about-material": "Beauty Park haqida",
     "terms-of-use": "Foydalanish shartlari",
     "privacy-and-security": "Maxfiylik va xavfsizlik siyosati",
     "return-policy": "Qaytarish siyosati",
@@ -23,14 +23,14 @@
   },
   "AboutUs": {
     "about": {
-      "title": "Miyabi Studio haqida",
+      "title": "Beauty Park haqida",
       "main": "Bosh Sahifa",
 
-      "des": "Ashyo 2022 yilda Toshkent shahrida tashkil etylgan."
+      "des": "Beauty Park yilda Toshkent shahrida tashkil etylgan."
     },
     "nasiya": {
       "title": "Muddatli to'lov",
-      "des": "Ashyoda barcha eliktronika maishiy texnikalar uchun qulay onlayn to’lov rejasi"
+      "des": "Beauty Park barcha eliktronika maishiy texnikalar uchun qulay onlayn to’lov rejasi"
     },
     "paymentMethods": {
       "title": "To‘lov usullari",
@@ -38,19 +38,19 @@
     },
     "delivery": {
       "title": "Joy band qilish",
-      "des": "Ashyoda tovarlarni yetkazib berish shartlari."
+      "des": "Beauty Park tovarlarni yetkazib berish shartlari."
     },
     "garranty": {
       "title": "Tavorlarga kafolat",
-      "des": "Ashyo onlayn do’konining kafolati va qaytarilish haqida hamma narsani bilib oling"
+      "des": "Beauty Park saytiningkafolati va qaytarilish haqida hamma narsani bilib oling"
     },
     "help": {
       "title": "Yordam",
       "des": "Tushumagan narsalaringiz bo’lsa savollaringizni bering."
     },
     "productsTitle": "Oxirgi ko’rilgan mahsulotlar",
-    "des1": "Miyabi Studio — zamonaviy go‘zallik saloni bo‘lib, mijozlarga sifatli xizmat, nafis muhit va ishonchli natijani taqdim etadi. Soch turmaklash, manikyur, makyaj, kosmetologiya va boshqa ko‘plab xizmatlar bir joyda jamlangan.",
-    "des2":  "Miyabi go‘zallik saloni 2025-yilda Japan Digital University talabalari tomonidan tashkil etilgan. Bugungi kunga kelib poytaxt va viloyatlarda 26 ta filial faoliyat yuritmoqda va mijozlar ishonchini qozonmoqda.",
+    "des1": "Beauty Park — zamonaviy go‘zallik saloni bo‘lib, mijozlarga sifatli xizmat, nafis muhit va ishonchli natijani taqdim etadi. Soch turmaklash, manikyur, makyaj, kosmetologiya va boshqa ko‘plab xizmatlar bir joyda jamlangan.",
+    "des2": "Beauty Parkgo‘zallik saloni 2025-yilda Japan Digital University talabalari tomonidan tashkil etilgan. Bugungi kunga kelib poytaxt va viloyatlarda 26 ta filial faoliyat yuritmoqda va mijozlar ishonchini qozonmoqda.",
     "des3": "Har bir xizmatni siz uchun qulay usulda tanlashingiz mumkin: salonlarimizga tashrif buyurib yoki onlayn bron qilish orqali. Shuningdek, aksiyalar va bo‘lib to‘lash imkoniyatlari ham mavjud. Ro‘yxatdan o‘tish uchun faqat pasport kifoya.",
     "des4": "Bizda chet ellik fuqarolar uchun qulay xizmat ko‘rsatish sharoiti yaratilgan."
   },
@@ -89,7 +89,7 @@
     "specs": "Telfon xususiyatlari",
     "reviews": "Mijozlarni fikrlari",
     "Sale": "Chegirma",
-    "EnjoyMusic": "Musiqa zavqini his qilish uchun ko'p mablag' sarflash shart emas!",
+    "EnjoyMusic": "Go'zallik zavqini his qilish uchun ko'p mablag' sarflash shart emas!",
     "LastViewedProducts": "Oxirgi ko‘rilgan mahsulotlar",
     "PromotionalProducts": "Aksiyadagi xizmatlar",
     "MostPopularProducts": "Go‘zallik trendlari 2025",

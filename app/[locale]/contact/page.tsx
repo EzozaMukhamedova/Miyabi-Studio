@@ -174,7 +174,7 @@ const Contact = () => {
         <div className="hidden sm:block ">
           <div className="flex flex-wrap md:flex-nowrap items-start ml-[340px] z-10 relative">
             <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg p-6 w-full md:max-w-[450px] space-y-4 mt-[10px] pt-[50px] px-[50px]">
-              <h2 className="text-xl font-semibold">OOO “Ashyo”</h2>
+              <h2 className="text-xl font-semibold">Beauty Park”</h2>
               <div className="flex gap-[15px] items-center">
                 <p className="text-sm text-[#00000099] sm:text-[#00000048]">
                   {tContact("phoneLabel")}:
@@ -186,10 +186,10 @@ const Contact = () => {
                   {tContact("emailLabel")}:
                 </p>
                 <a
-                  href="mailto:ashyo@gmail.com"
+                  href="mailto:beautypark@gmail.com"
                   className="text-blue-600 underline"
                 >
-                  ashyo@gmail.com
+                  beautypark@gmail.com
                 </a>
               </div>
               <div>

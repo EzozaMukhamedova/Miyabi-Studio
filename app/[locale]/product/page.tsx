@@ -1487,7 +1487,7 @@ export default function ServicesPage() {
   React.useEffect(() => setCurrentPage(1), [price, category, serviceType]);
 
   return (
-    <div className="containers flex flex-col lg:flex-row gap-[20px] border border-red-600 ">
+    <div className="containers flex flex-col lg:flex-row gap-[20px]  ">
       {/* Chap panel */}
       <div className="min-w-[280px] w-full lg:w-[300px] border border-gray-200 bg-[#EBEFF3] p-[18px] rounded-[8px] mt-[40px]">
         {/* Narx va slider */}

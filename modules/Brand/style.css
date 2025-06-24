@@ -126,12 +126,12 @@
 
     .grid-element {
       img {
-        width: 50%;
+        /* width: 100%; */
       }
     }
     .grid-element-5 {
       img {
-        width: 30%;
+        /* width: 30%; */
       }
     }
   }

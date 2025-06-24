@@ -347,7 +347,7 @@ function SalonRatingCard({ salon, extraStyle }) {
     </div>
   );
 }
- // Mobile variant
+// Mobile variant
 function MobileSalonRatingCard({ salon }) {
   return (
     <div
@@ -421,7 +421,7 @@ export default function DemoProductsPage() {
       </h2>
 
       {/* Desktop: Slider */}
-      <div className="max-[690px]:hidden border-2 border-red-500">
+      <div className="max-[690px]:hidden ">
         <Slider {...settings}>
           {popularSalons.map((salon) => (
             <SalonRatingCard key={salon.id} salon={salon} />

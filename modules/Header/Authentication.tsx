@@ -9,18 +9,30 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 import { Input } from "../../components/ui/input";
-import { Login } from "@/service/AuthLogin";
-import { Register } from "@/service/AuthRegister";
-import { useRouter } from "next/navigation";
 import { UserIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
+
+// localStorage yordamchi funksiya
+function saveUser(user) {
+  localStorage.setItem("auth_user", JSON.stringify(user));
+}
+function getUser() {
+  const user = localStorage.getItem("auth_user");
+  return user ? JSON.parse(user) : null;
+}
+function saveUserList(users) {
+  localStorage.setItem("all_users", JSON.stringify(users));
+}
+function getUserList() {
+  const users = localStorage.getItem("all_users");
+  return users ? JSON.parse(users) : [];
+}
 
 export function Auth() {
   const [activeTab, setActiveTab] = useState<"login" | "register">("login");
   const [open, setOpen] = useState(false);
   const router = useRouter();
-  const { mutate: loginMutation } = Login();
-  const { mutate: registerMutation } = Register();
 
   const [errors, setErrors] = useState({
     email: "",
@@ -29,95 +41,99 @@ export function Auth() {
   });
   const [errorMsg, setErrorMsg] = useState<string>("");
 
+  // Login funksiyasi
   function handleLogin(e: FormEvent) {
     e.preventDefault();
+    setErrors({ email: "", password: "", fullname: "" });
+    setErrorMsg("");
 
-    const data = {
-      email: (e.target as HTMLFormElement).email.value,
-      password: (e.target as HTMLFormElement).password.value,
-    };
+    const form = e.target as HTMLFormElement;
+    const email = form.email.value;
+    const password = form.password.value;
 
     let isValid = true;
-    // const newErrors = { email: "", password: "" };
     const newErrors = { email: "", password: "", fullname: "" };
 
-    if (!data.email) {
-      newErrors.email = "Email is required.";
+    if (!email) {
+      newErrors.email = "Email majburiy.";
       isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
-      newErrors.email = "Please enter a valid email address.";
-      isValid = false;
-    }
-
-    if (!data.password) {
-      newErrors.password = "Password is required.";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "To‘g‘ri email kiriting.";
       isValid = false;
     }
-
+    if (!password) {
+      newErrors.password = "Parol majburiy.";
+      isValid = false;
+    }
     if (!isValid) {
       setErrors(newErrors);
       return;
     }
 
-    loginMutation(data, {
-      onSuccess: () => {
-        toast.success("Muvaffaqiyatli tizimga kirdingiz!");
-        setOpen(false);
-        router.push("/");
-      },
-      onError: (err) => {
-        console.error("Login failed", err);
-        toast.error("Login muvaffaqiyatsiz. Email yoki parol noto‘g‘ri.");
-      },
-    });
+    // localStorage tekshirish
+    const users = getUserList();
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+    if (!user) {
+      setErrorMsg("Email yoki parol noto‘g‘ri.");
+      toast.error("Login muvaffaqiyatsiz. Email yoki parol noto‘g‘ri.");
+      return;
+    }
+    saveUser(user);
+    toast.success("Muvaffaqiyatli tizimga kirdingiz!");
+    setOpen(false);
+    router.push("/");
   }
 
+  // Register funksiyasi
   function handleRegister(e: FormEvent) {
     e.preventDefault();
+    setErrors({ email: "", password: "", fullname: "" });
+    setErrorMsg("");
 
-    const data = {
-      fullname: (e.target as HTMLFormElement).fullname.value,
-      email: (e.target as HTMLFormElement).email.value,
-      password: (e.target as HTMLFormElement).password.value,
-    };
+    const form = e.target as HTMLFormElement;
+    const fullname = form.fullname.value;
+    const email = form.email.value;
+    const password = form.password.value;
 
     let isValid = true;
     const newErrors = { fullname: "", email: "", password: "" };
 
-    if (!data.fullname) {
-      newErrors.fullname = "Full name is required.";
+    if (!fullname) {
+      newErrors.fullname = "To‘liq ism majburiy.";
       isValid = false;
     }
-
-    if (!data.email) {
-      newErrors.email = "Email is required.";
+    if (!email) {
+      newErrors.email = "Email majburiy.";
       isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
-      newErrors.email = "Please enter a valid email address.";
-      isValid = false;
-    }
-
-    if (!data.password) {
-      newErrors.password = "Password is required.";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "To‘g‘ri email kiriting.";
       isValid = false;
     }
-
+    if (!password || password.length < 6) {
+      newErrors.password = "Parol 6 ta belgidan kam bo‘lmasligi kerak.";
+      isValid = false;
+    }
     if (!isValid) {
       setErrors(newErrors);
       return;
     }
 
-    registerMutation(data, {
-      onSuccess: () => {
-        toast.success("Ro‘yxatdan muvaffaqiyatli o‘tdingiz!");
-        setOpen(false);
-        router.push("/");
-      },
-      onError: (err) => {
-        console.error("Register failed", err);
-        toast.error("Ro‘yxatdan o‘tishda xatolik yuz berdi.");
-      },
-    });
+    // localStorage saqlash
+    const users = getUserList();
+    if (users.find((u) => u.email === email)) {
+      setErrorMsg("Bu email bilan foydalanuvchi allaqachon bor.");
+      toast.error("Bu email ro‘yxatdan o‘tgan.");
+      return;
+    }
+    const user = { fullname, email, password };
+    users.push(user);
+    saveUserList(users);
+    saveUser(user);
+    toast.success("Ro‘yxatdan muvaffaqiyatli o‘tdingiz!");
+    setOpen(false);
+    router.push("/");
   }
 
   return (
@@ -133,7 +149,6 @@ export function Auth() {
           </span>
         </Button>
       </DialogTrigger>
-
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
@@ -142,9 +157,9 @@ export function Auth() {
                 onClick={() => setActiveTab("login")}
                 className={`${
                   activeTab === "login"
-                    ? "font-bold text-[#0F4A97] cursor-pointer"
-                    : "text-gray-500 cursor-pointer"
-                } cursor-pointer`}
+                    ? "font-bold text-[#e47c48] "
+                    : "text-gray-500"
+                } cursor-pointer `}
               >
                 Login
               </button>
@@ -153,8 +168,8 @@ export function Auth() {
                 onClick={() => setActiveTab("register")}
                 className={`${
                   activeTab === "register"
-                    ? "font-bold text-[#0F4A97] cursor-pointer"
-                    : "text-gray-500 cursor-pointer"
+                    ? "font-bold text-[#e47c48]"
+                    : "text-gray-500"
                 } cursor-pointer`}
               >
                 Register
@@ -176,12 +191,11 @@ export function Auth() {
                 <span className="text-sm text-red-500">{errors.email}</span>
               )}
             </div>
-
             <div>
               <Input
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Parol"
                 required
                 className={errors.password ? "border-red-500" : ""}
               />
@@ -189,14 +203,12 @@ export function Auth() {
                 <span className="text-sm text-red-500">{errors.password}</span>
               )}
             </div>
-
             {errorMsg && (
               <span className="text-sm text-red-500">{errorMsg}</span>
             )}
-
             <Button
               type="submit"
-              className="w-full cursor-pointer bg-[#0F4A97] hover:opacity-80 transition-opacity"
+              className="w-full cursor-pointer hover:bg-[#e47c48] bg-[#e47c48] hover:opacity-80 transition-opacity"
             >
               Login
             </Button>
@@ -206,7 +218,7 @@ export function Auth() {
             <div>
               <Input
                 name="fullname"
-                placeholder="Full Name"
+                placeholder="To‘liq ism"
                 required
                 className={errors.fullname ? "border-red-500" : ""}
               />
@@ -214,7 +226,6 @@ export function Auth() {
                 <span className="text-sm text-red-500">{errors.fullname}</span>
               )}
             </div>
-
             <div>
               <Input
                 name="email"
@@ -227,12 +238,11 @@ export function Auth() {
                 <span className="text-sm text-red-500">{errors.email}</span>
               )}
             </div>
-
             <div>
               <Input
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Parol"
                 minLength={6}
                 required
                 className={errors.password ? "border-red-500" : ""}
@@ -241,10 +251,9 @@ export function Auth() {
                 <span className="text-sm text-red-500">{errors.password}</span>
               )}
             </div>
-
             <Button
               type="submit"
-              className="w-full cursor-pointer bg-[#0F4A97] hover:opacity-80 transition-opacity"
+              className="w-full cursor-pointer hover:bg-[#e47c48] bg-[#e47c48] hover:opacity-80 transition-opacity"
             >
               Register
             </Button>

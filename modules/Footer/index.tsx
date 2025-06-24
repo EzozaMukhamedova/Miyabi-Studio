@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="min-[750px]:!mt-[57px] min-[750px]:!mb-[81px] max-[750px]:!mb-[40px] max-[750px]:!mt-[30px] containers text-[14px] text-[#00000066]">
-        © 2025 Miyabi Studio O'zbekistondagi Yagona Beauty brend.
+        © 2025 Beauty Park O'zbekistondagi Yagona Beauty brend.
       </p>
     </footer>
   );
