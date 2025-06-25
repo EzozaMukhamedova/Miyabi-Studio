@@ -15,7 +15,7 @@ const dummyProducts: ProductType[] = [
     price: "100000",
     is_liked: false,
     category_id: 1,
-    description: "Kundalik Soch turmaklash xizmatlari",
+    description: "Kundalik Soch turmaklash xizmatlari  (20 daqiqada)",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const dummyProducts: ProductType[] = [
     price: "80000",
     is_liked: false,
     category_id: 2,
-    description: "Chiroyli manikyur dizaynlari",
+    description: "Chiroyli manikyur dizaynlari (30 daqiqada)",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const dummyProducts: ProductType[] = [
     price: "120000",
     is_liked: false,
     category_id: 3,
-    description: "Yuz Terisini parvarishlash muolajalari",
+    description: "Yuz Terisini parvarishlash muolajalari (60 daqiqada)",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const dummyProducts: ProductType[] = [
     price: "150000",
     is_liked: false,
     category_id: 4,
-    description: "Bo'yin va yelka uchun massaj xizmati",
+    description: "Bo'yin va yelka uchun massaj (70 daqiqada)",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const dummyProducts: ProductType[] = [
     price: "60000",
     is_liked: false,
     category_id: 5,
-    description: "Kiprik bo‘yash va uzaytirish",
+    description: "Kiprik bo‘yash va uzaytirish (40 daqiqada)",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const dummyProducts: ProductType[] = [
     price: "90000",
     is_liked: false,
     category_id: 6,
-    description: "Kundalik yengil make-up xizmati",
+    description: "Kundalik yengil make-up xizmati (25 daqiqada)",
   },
 ];
 

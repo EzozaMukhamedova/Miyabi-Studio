@@ -63,134 +63,137 @@ export default function CategoryPage() {
 
           {/* Service qismi*/}
           <div>
-            <h2 className="mb-2 text-xl font-semibold">Service</h2>
+            <h2 className="mb-5 text-2xl font-bold text-[#e47c48]">
+              Xizmatlar va Mijoz Fikrlari
+            </h2>
 
-            <div className="p-4 mb-4 border rounded-md shadow-sm">
-              <p className="font-bold">Soch turmaklash - 60 daqiqa</p>
-              <p className="mt-2 text-sm text-gray-600">
-                Turli uslublardagi professional soch turmaklash xizmati.
-              </p>
-            </div>
-
-            <div className="p-4 mb-4 border rounded-md shadow-sm">
-              <p className="font-bold">Maxsus uslubli to‘y soch turmaklash</p>
-              <p className="mt-2 text-sm text-gray-600">
-                Maxsus tadbirlar uchun professional to‘y soch bezatish
-                xizmatlari.
-              </p>
-            </div>
-
-            <div className="flex items-start justify-between p-4 mb-4 border rounded-md shadow-sm">
-              <div>
-                <p className="font-bold">
-                  [Yuz] Teshiklarni tozalash yuz 60 daqiqa
-                </p>
-                <p className="mt-1 text-sm text-gray-600">75 daqiqa</p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Tozalash → yuz yoki yuzdagi epilasyon → gidra yoki yuz peeling
-                  → modelllashtirish to‘plami. Tegishli tashvishlar: tiqilib
-                  qolgan gözenekler/qaraytirish/pürüzlilik/sebum muammolari.
+            <div className="grid gap-5 md:grid-cols-2">
+              {/* 1-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Yuz parvarishi
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    60 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Xodimalar professional, natija har doim zamonaviy va uslubli
+                  chiqadi! Qizimning to‘yida ham shu salonga ishonch bildirdik."
+                  — <span className="text-[#f02c96]">Malika Y.</span>
                 </p>
               </div>
-              <div className="text-right min-w-[100px]">
-                <p className="font-semibold">13 000 yen</p>
-                <button className="px-4 py-1 mt-2 text-white bg-gray-800 rounded">
-                  Zaxira
-                </button>
-              </div>
-            </div>
-
-            <div className="flex items-start justify-between p-4 mb-4 border rounded-md shadow-sm">
-              <div>
-                <p className="font-bold">
-                  [Yuz] Nemlendirici va chiroyli teri yuzini 60 daqiqa
-                </p>
-                <p className="mt-1 text-sm text-gray-600">75 daqiqa</p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Peeling → Yengil yuz (foto) → Quritish, xiralik, ko‘zlar,
-                  nozik ajinlar, qaruvchilik parvarish.
+              {/* 2-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Quruq terini namlantirish
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    90 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "To‘yim uchun turmak oldim — ko‘pchilik maqtadi! Nafis,
+                  mustahkam va juda go‘zal chiqdi." —{" "}
+                  <span className="text-[#e47c48]">Nigora M.</span>
                 </p>
               </div>
-              <div className="text-right min-w-[100px]">
-                <p className="font-semibold">16 000 yen</p>
-                <button className="px-4 py-1 mt-2 text-white bg-gray-800 rounded">
-                  Zaxira
-                </button>
-              </div>
-            </div>
-
-            <div className="flex items-start justify-between p-4 mb-4 border rounded-md shadow-sm">
-              <div>
-                <p className="font-bold">
-                  [Yuz] Kichkina yuzni yuqoriga ko‘tarish 60 daqiqa
-                </p>
-                <p className="mt-1 text-sm text-gray-600">75 daqiqa</p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Radio to‘lqin → yuz chizig‘ining sarkmasi / ikki iyak / sust
-                  kontur.
+              {/* 3-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Yuz: Teshiklarni tozalash
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    75 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Yuzim silliq va toza bo‘ldi, aknilarim sezilarli kamaydi.
+                  Xodimalar juda e’tiborli." —{" "}
+                  <span className="text-[#f02c96]">Dilnoza O.</span>
                 </p>
               </div>
-              <div className="text-right min-w-[100px]">
-                <p className="font-semibold">18 000 yen</p>
-                <button className="px-4 py-1 mt-2 text-white bg-gray-800 rounded">
-                  Zaxira
-                </button>
-              </div>
-            </div>
-
-            <div className="flex items-start justify-between p-4 mb-4 border rounded-md shadow-sm">
-              <div>
-                <p className="font-bold">
-                  [Yuz] Maxsus tayyorlangan yuz 120 daqiqa
-                </p>
-                <p className="mt-1 text-sm text-gray-600">135 daqiqa</p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Umumiy teri muammolari (terining teshiklari / quritilish /
-                  sarkmasi / qarish).
+              {/* 4-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Yuz: Nemlendiruvchi parvarish
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    75 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Terim nemlangan, tiniq va yorqin bo‘lib chiqdi. Massaj ham
+                  yoqdi!" — <span className="text-[#e47c48]">Dilafruz X.</span>
                 </p>
               </div>
-              <div className="text-right min-w-[100px]">
-                <p className="font-semibold">23 000 yen</p>
-                <button className="px-4 py-1 mt-2 text-white bg-gray-800 rounded">
-                  Zaxira
-                </button>
-              </div>
-            </div>
-
-            <div className="flex items-start justify-between p-4 mb-4 border rounded-md shadow-sm">
-              <div>
-                <p className="font-bold">
-                  [Tana] Oyoq va oyoq parvarishi massaji 30 daqiqa
-                </p>
-                <p className="mt-1 text-sm text-gray-600">40 daqiqa</p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Shish / sovuq / oyoqlarda og‘riq / charchash / sinov.
+              {/* 5-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Yuz: Mini lifting
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    75 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Radio to‘lqinli muolajadan keyin yuz chizig‘im ancha
+                  tiniqlashdi. Juda tavsiya qilaman!" —{" "}
+                  <span className="text-[#f02c96]">Lola A.</span>
                 </p>
               </div>
-              <div className="text-right min-w-[100px]">
-                <p className="font-semibold">8 000 yen</p>
-                <button className="px-4 py-1 mt-2 text-white bg-gray-800 rounded">
-                  Zaxira
-                </button>
-              </div>
-            </div>
-
-            <div className="flex items-start justify-between p-4 mb-4 border rounded-md shadow-sm">
-              <div>
-                <p className="font-bold">
-                  [Body] To‘liq tana xushbo‘yligi tanaga ishlov berish 60 daqiqa
-                </p>
-                <p className="mt-1 text-sm text-gray-600">70 daqiqa</p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Xushbo‘y hid bilan orqa, elkalar, oyoq va tana yengilligi.
-                  Faqat ayollar uchun mavjud.
+              {/* 6-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Maxsus to‘liq yuz parvarishi
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    135 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Teri muammolarim uchun kompleks muolaja oldim — natijadan
+                  juda mamnunman." —{" "}
+                  <span className="text-[#e47c48]">Nozima S.</span>
                 </p>
               </div>
-              <div className="text-right min-w-[100px]">
-                <p className="font-semibold">16 000 yen</p>
-                <button className="px-4 py-1 mt-2 text-white bg-gray-800 rounded">
-                  Zaxira
-                </button>
+              {/* 7-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Yuz massaji
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    40 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Ishdan charchaganimda oyoq massaji menga dam beradi, har
+                  safar shu salonga kelaman." —{" "}
+                  <span className="text-[#f02c96]">Gulbahor T.</span>
+                </p>
+              </div>
+              {/* 8-xizmat */}
+              <div className="p-5 rounded-xl shadow bg-white border border-[#f6e2d1] flex flex-col gap-3 hover:shadow-lg transition">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-semibold text-[#2f2f2f]">
+                    Yuz massaji (xushbo‘y aromatlar bilan)
+                  </span>
+                  <span className="px-3 py-1 bg-[#ffe6d3] text-[#e47c48] rounded-full text-xs font-bold">
+                    70 daqiqa
+                  </span>
+                </div>
+                <p className="text-[15px] text-[#555] italic">
+                  "Yuz massajidan keyin o‘zimni yengil his qilaman, stressdan
+                  xalos bo‘ldim." —{" "}
+                  <span className="text-[#e47c48]">Zamira R.</span>
+                </p>
               </div>
             </div>
           </div>
