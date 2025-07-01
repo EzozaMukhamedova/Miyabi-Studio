@@ -2,8 +2,9 @@
   "HeaderTopTS": {
     "tashkent": "Ташкент",
     "about-us": "О нас",
-    "products": "Продукты",
+    "products": "Услуги",
     "contacts": "Контакты",
+    "populars": "Популярное",
     "category": "Kатегория",
     "menu": "Меню",
     "about-material": "О материале",
@@ -55,7 +56,7 @@
   },
   "Products": {
     "main": "Главная страница",
-    "products": "Продукты",
+    "products": "Услуги",
     "smart": "Смартфоны",
     "contact": "Обратная связь",
     "category": "Категория",

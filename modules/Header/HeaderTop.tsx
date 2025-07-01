@@ -54,6 +54,12 @@ const HeaderTop = () => {
           >
             {t("contacts")}
           </Link>
+                <Link
+            href="/populars"
+            className="text-[#545D6A] hover:text-[#134E9B] duration-300"
+          >
+            {t("populars")}
+          </Link>
         </nav>
         <div className="flex justify-end items-center gap-[18px]">
           <Link href={`tel:+998711234567`}>+998 (99) 897-45-85</Link>

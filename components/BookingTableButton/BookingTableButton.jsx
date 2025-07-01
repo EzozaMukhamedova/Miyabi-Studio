@@ -347,13 +347,84 @@ export default function MultiStepBookingModal({ open, onClose }) {
     else if (step === 2) setStep(1);
     else onClose();
   }
-  function handleBook() {
+  // function handleBook() {
+  //   if (!selectedTime) return;
+  //   setBookedSlots([
+  //     ...bookedSlots,
+  //     { salonId: selectedSalon.id, date, time: selectedTime, my: true },
+  //   ]);
+  //   setToast({ open: true, message: "Siz uchun joy band qilindi!" });
+
+  //     // 2. Backendga POST so‘rov yuborish
+  // try {
+  //   const response = await fetch("http://10.20.1.76:8000/api/send/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       salon_id: selectedSalon.id,
+  //       salon_name: selectedSalon.name,
+  //       address: selectedSalon.address,
+  //       district: selectedSalon.district,
+  //       date: date,
+  //       time: selectedTime,
+  //     }),
+  //   });
+
+  //      if (!response.ok) {
+  //     throw new Error("Serverdan xatolik keldi");
+  //   }
+
+  //     } catch (error) {
+  //   setToast({ open: true, message: "Xatolik yuz berdi! Qayta urinib ko‘ring." });
+  //   // Xatolik bo‘lsa, localdagi bronni orqaga olish mumkin (advanced variant)
+  // }
+
+  //   setTimeout(() => {
+  //     setStep(1);
+  //     setSelectedDistrict("");
+  //     setSelectedSalon(null);
+  //     setSelectedTime("");
+  //     setDate(getDates()[0]);
+  //     setFilter("all");
+  //     onClose();
+  //   }, 2500);
+
+  // }
+  async function handleBook() {
     if (!selectedTime) return;
+
     setBookedSlots([
       ...bookedSlots,
       { salonId: selectedSalon.id, date, time: selectedTime, my: true },
     ]);
     setToast({ open: true, message: "Siz uchun joy band qilindi!" });
+
+    // Yangi message string
+    const message = `Salon: ${selectedSalon.name}
+Manzil: ${selectedSalon.address}
+Tuman: ${selectedSalon.district}
+Sana: ${date}
+Vaqt: ${selectedTime}`;
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/send/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Xatolik yuz berdi");
+      }
+      // Agar kerak bo‘lsa, success uchun toast, yoki boshqa natija chiqaring
+    } catch (error) {
+      setToast({
+        open: true,
+        message: "Xatolik yuz berdi! Qayta urinib ko‘ring.",
+      });
+    }
+
     setTimeout(() => {
       setStep(1);
       setSelectedDistrict("");
@@ -364,6 +435,7 @@ export default function MultiStepBookingModal({ open, onClose }) {
       onClose();
     }, 2500);
   }
+
   function isTimeBooked(time) {
     return bookedSlots.some(
       (b) =>

@@ -12,7 +12,7 @@ import HeaderSidebar from "./HeaderSidebar";
 
 function HeaderCenter() {
   const buttons = [
-    { id: 1, icon: <CompareIcon />, count: 7, to: "/compare" },
+    // { id: 1, icon: <CompareIcon />, count: 7, to: "/compare" },
     { id: 2, icon: <HeartOutlineIcon />, count: 11, to: "/liked" },
     { id: 3, icon: <CartIcon />, count: 7, to: "/cart" },
     { id: 4, icon: <Auth />, count: 0, to: "/" },

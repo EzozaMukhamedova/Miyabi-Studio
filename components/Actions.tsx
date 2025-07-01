@@ -8,7 +8,6 @@ const ActionButton: FC<ActionsButtonType> = ({ id, icon, to, count }) => {
   return (
     <button
       type="button"
-  
       onClick={() => {
         if (to) {
           router.push(to);
